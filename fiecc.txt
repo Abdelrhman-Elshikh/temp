@@ -1,1 +1,20 @@
 
+[options]
+; This is the password that allows database operations:
+admin_passwd = %TkPO3eu&2B7n#9?
+db_host = False
+db_port = False
+db_user = odoo15
+db_password = False
+addons_path = /opt/odoo15/odoo/addons,/opt/odoo15/odoo15e,/opt/odoo15/atum15/3>
+proxy_mode = True
+xmlrpc_interface = 127.0.0.1
+netrpc_interface = 127.0.0.1
+workers = 4
+limit_memory_hard = 3221225472
+limit_memory_soft = 2684354560
+limit_request = 8192
+limit_time_cpu = 600000
+limit_time_real = 120000
+max_cron_threads = 1
+db_maxconn = 100
