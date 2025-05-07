@@ -18,3 +18,26 @@ limit_time_cpu = 600000
 limit_time_real = 120000
 max_cron_threads = 1
 db_maxconn = 100
+
+sudo nano /etc/systemd/system/odoo15.service
+
+[Unit]
+Description=Odoo15
+Requires=postgresql.service
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+SyslogIdentifier=odoo15
+User=odoo15
+Group=odoo15
+ExecStart=/opt/odoo15/odoo-venv/bin/python3 /opt/odoo15/odoo/odoo-bin -c /etc/odoo15.conf
+
+[Install]
+WantedBy=multi-user.target
+
+sudo mkdir /var/log/odoo15
+sudo chown odoo15:odoo15 /var/log/odoo15
+sudo systemctl daemon-reload
+sudo systemctl enable --now odoo15
+sudo systemctl status odoo15
