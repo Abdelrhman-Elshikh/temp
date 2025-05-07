@@ -1,3 +1,1 @@
-git clone https://Shady_Safwat@bitbucket.org/centione/odoo15e_last.git
-ATBBF8HFNgp8TMGDt4ENf6JfzAcM80D11CE6
 
